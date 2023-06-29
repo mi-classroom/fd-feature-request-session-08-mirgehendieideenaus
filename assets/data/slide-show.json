@@ -13,7 +13,7 @@
     },
     {
       "caption": "Spaghetti alla Melanzane",
-      "imagesrc": "spaghetti-melanzane.jpg.jpg",
+      "imagesrc": "spaghetti-melanzane.jpg",
       "rating": 2
     },
     {
@@ -23,7 +23,7 @@
     },
     {
       "caption": "Spaghetti Bolognese",
-      "imagesrc": "spaghetti-bolognese.jpg.jpg",
+      "imagesrc": "spaghetti-bolognese.jpg",
       "rating": 5
     }
   ]
