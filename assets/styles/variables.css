@@ -18,9 +18,9 @@
   --primary: #000;
   --primary-lighter: #343434;
   --secondary: #fff;
-  --accent: #ff8080;
-  --accent-lighter: #ffadad;
-  --accent-lightest: #fdd0d0;
+  --accent: #de7575;
+  --accent-lighter: #d43f3f;
+  --accent-lightest: #c64444;
   --light: hsl(0deg 0% 80% / 100%);
   --lighter: hsl(0deg 0% 90% / 100%);
   --lightest: hsl(0deg 0% 100% / 100%);
