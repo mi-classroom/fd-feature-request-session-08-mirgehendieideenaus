@@ -12,3 +12,4 @@ Das ist der Startercode für die vierte Session im Kurs Frontend-Development. Wi
 ## Credits 📝
 
 Der Content für diese Aufgabe basiert auf Inhalten der Website [chefkoch.de](https://www.chefkoch.de).
+CSS von den Pixelverschiebern / Pixelschubsern.
