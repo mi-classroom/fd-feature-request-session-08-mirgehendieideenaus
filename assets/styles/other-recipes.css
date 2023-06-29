@@ -1,0 +1,72 @@
+/* stylelint-disable selector-class-pattern */
+.other-recipes {
+  position: relative;
+}
+
+.other-recipes-list {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-bottom: var(--xl);
+}
+
+.other-recipes-list .other-recipes-list__item {
+  position: absolute;
+  inset: 0;
+  list-style: none;
+  opacity: 0;
+  transition: opacity 1s, margin-left 1s;
+}
+
+.other-recipes-list .other-recipes-list__item figure {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.other-recipes-list .other-recipes-list__item figure img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  filter: blur(var(--s));
+  object-fit: cover;
+  transition: filter 1s;
+}
+
+.other-recipes-list .other-recipes-list__item.is-active {
+  position: relative;
+  z-index: 0;
+  margin-left: 0;
+  opacity: 1;
+}
+
+.other-recipes-list .other-recipes-list__item.is-active figure img {
+  filter: blur(0);
+}
+
+.other-recipes-list .other-recipes-list__item:not(.is-active) {
+  z-index: -10;
+  margin-left: 10%;
+  opacity: 0;
+}
+
+.other-recipes-list__button {
+  position: absolute;
+  top: calc(50% - var(--xl));
+  height: var(--xl);
+  border: none;
+  background-color: transparent;
+}
+
+.other-recipes-list__button:hover {
+  cursor: pointer;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.other-recipes-list__button img {
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+
+.other-recipes-list__button.is-right {
+  right: 0;
+}

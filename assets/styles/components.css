@@ -1,0 +1,461 @@
+/* Hero
+############################################################################ */
+
+.hero {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+}
+
+.hero figure {
+  position: absolute;
+  margin: 0;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero figure img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.5);
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero figure figcaption {
+  position: absolute;
+  right: var(--xl);
+  bottom: var(--s);
+  font-size: smaller;
+}
+
+.hero h1 {
+  color: var(--lightest);
+}
+
+.hero h2 {
+  color: var(--lightest);
+  font-family: var(--font-family-serif);
+  font-size: var(--l);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--lh-heading);
+}
+
+.hero p {
+  color: var(--secondary);
+  font-size: var(--m);
+}
+
+.hero a {
+  display: block;
+  margin-top: var(--l);
+  color: var(--secondary);
+  font-size: smaller;
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+}
+
+.hero-content {
+  max-width: var(--max-width-content);
+  padding: var(--xl) var(--l) var(--xxl);
+  padding-right: calc(10vw * 1.5);
+}
+
+/* Subheader
+############################################################################ */
+
+.subheader {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+/* Catcher
+############################################################################ */
+
+.catcher {
+  max-width: var(--max-width-content);
+  padding: var(--l);
+}
+
+.catcher * {
+  margin: var(--spacing-margin-medium) 0 0;
+}
+
+.catcher h1 {
+  max-width: 90%;
+}
+
+.catcher p:last-child {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.catcher p:last-child svg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.catcher hr {
+  width: 22%;
+  border-top: 3px solid var(--accent-lighter);
+}
+
+/* Ingredients
+############################################################################ */
+
+.ingredients table {
+  width: 100%;
+  border: 1px solid var(--accent);
+  border-collapse: collapse;
+}
+
+.ingredients th,
+.ingredients td {
+  padding: 8px;
+  border-right: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  text-align: left;
+}
+
+.ingredients td:last-child {
+  border-right: none;
+}
+
+/* Nutritional Values
+############################################################################ */
+
+.nutritional-values {
+  width: 100%;
+}
+
+@media screen and (min-width: 840px) {
+  .nutritional-values {
+    text-align: center;
+  }
+}
+
+.nutritional-values dl {
+  margin: 20px 0 0;
+}
+
+.nutritional-values dt {
+  margin: 20px 0 0;
+  font-size: 1.2rem;
+}
+
+.nutritional-values dd {
+  color: var(--accent);
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+/* Navbar (Main Navigation)
+############################################################################ */
+
+.navbar {
+  width: 100%;
+  padding: var(--s);
+  background: var(--secondary);
+}
+
+.navbar ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+}
+
+/* navbar link highlight */
+.navbar a.is-active {
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+}
+
+.menue-button {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.menue-button[data-state=active] {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  display: block;
+  padding: var(--xs) var(--xs);
+  background-color: var(--lighten);
+  opacity: 1;
+}
+
+.menue-button img {
+  width: 40px;
+}
+
+@media screen and (min-width: 840px) {
+  .navbar {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+  }
+
+  .navbar ul li:not(:last-child) {
+    margin-right: var(--spacing-margin-large);
+  }
+
+  .navbar ul li:last-child {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .menue-button {
+    display: none;
+  }
+
+}
+
+/* Intern Nav (Page Navigation)
+############################################################################ */
+
+.intern-nav {
+  z-index: 1;
+  right: 0;
+  margin-top: 0;
+  background-color: var(--accent-lightest);
+}
+
+.intern-nav ul {
+  padding: 1rem;
+  margin: 0;
+  list-style: none;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.intern-nav ul li {
+  margin-right: 0;
+}
+
+.intern-nav ul li a {
+  text-decoration: none;
+}
+
+.intern-nav ul li a[data-state="active"] {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+@media screen and (min-width: 840px) {
+  .intern-nav {
+    position: fixed;
+  }
+}
+
+/* Quantiy Selector
+############################################################################ */
+
+.quantity-selector-head {
+  max-width: var(--max-width-content);
+  color: var(--darkest);
+  font-family: var(--font-family-sans-serif);
+}
+
+.quantity-selector-head .highlighted {
+  padding: 0.2rem 0.7rem;
+  margin: 0 0.5rem;
+  background-color: var(--accent-lighter);
+  border-radius: 1rem;
+  font-weight: var(--font-weight-bold);
+}
+
+/* Form
+############################################################################ */
+
+form input {
+  padding: var(--s) var(--m);
+  margin-bottom: var(--l);
+}
+
+form button {
+  padding: var(--s) var(--xl);
+  border: none;
+  background: #d9d9d9;
+  border-radius: 0;
+  outline: none;
+}
+
+.form-container > * {
+  width: 100%;
+}
+
+.form-container button {
+  flex-grow: 1;
+  margin-bottom: var(--xs);
+}
+
+.form-container button:last-child {
+  background-color: var(--accent-lighter);
+}
+
+.form-container .input-container > * {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 840px) {
+  .form-container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--m);
+  }
+}
+
+textarea {
+  width: 100%;
+  height: 10rem;
+  padding: var(--s) var(--m);
+}
+
+label[for="data"] {
+  display: flex;
+  align-items: center;
+}
+
+form input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.invalid {
+  border: 2px solid red;
+}
+
+.invalid-label {
+  color: red;
+}
+
+/* Comments
+############################################################################ */
+
+.comments {
+  max-width: var(--max-width-content);
+  padding: var(--l);
+}
+
+.comments h3 {
+  margin-top: var(--xl);
+  margin-bottom: var(--l);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.comment-user-info p {
+  margin: 0 0 0 1.5rem;
+}
+
+.comment p:last-child {
+  width: 100%;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.comment img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.comment-user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Steps
+############################################################################ */
+
+.steps {
+  padding: 0;
+  counter-reset: step-count;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.steps > li {
+  display: block;
+  padding-bottom: var(--xl);
+  counter-increment: step-count;
+}
+
+.steps > li.is-text-only {
+  display: flex;
+  justify-content: center;
+}
+
+.steps > li.is-text-only p {
+  max-width: calc(var(--max-width-content) * 0.5);
+}
+
+.steps > li figure {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  gap: var(--m);
+}
+
+.steps .has-counter {
+  position: relative;
+  padding-top: 0;
+  margin-left: var(--xl);
+}
+
+.steps .has-counter::before {
+  position: absolute;
+  left: calc(var(--xl) * -1);
+  color: var(--accent);
+  content: counter(step-count);
+  font-size: var(--xl);
+  font-weight: bold;
+  line-height: var(--xl);
+}
+
+@media screen and (min-width: 840px) {
+  .steps > li figure {
+    width: auto;
+    flex-direction: row;
+  }
+
+  .steps .is-reversed {
+    flex-direction: row-reverse;
+  }
+
+  .steps > li figure > * {
+    width: 50%;
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+}
+
+

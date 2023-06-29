@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;700&display=swap");
+
+:root {
+  --base-size: 1rem;
+
+  /* Sizes */
+  --xs: calc(0.5 * var(--base-size));
+  --s: calc(1 * var(--base-size));
+  --m: calc(1.5 * var(--base-size));
+  --l: calc(2 * var(--base-size));
+  --xl: calc(3 * var(--base-size));
+  --xxl: calc(4 * var(--base-size));
+  --xxxl: calc(5 * var(--base-size));
+  --max-width-content: calc(60 * var(--s));
+
+  /* Colors */
+  --primary: #000;
+  --primary-lighter: #343434;
+  --secondary: #fff;
+  --accent: #ff8080;
+  --accent-lighter: #ffadad;
+  --accent-lightest: #fdd0d0;
+  --light: hsl(0deg 0% 80% / 100%);
+  --lighter: hsl(0deg 0% 90% / 100%);
+  --lightest: hsl(0deg 0% 100% / 100%);
+  --lighten: hsla(0deg 0% 100% / 80%);
+
+  /* Font Family */
+  --font-family-sans: "IBM Plex Sans", sans-serif;
+  --font-family-serif: "IBM Plex Serif", serif;
+
+  /* Spacing */
+  --spacing-padding: 110px;
+  --spacing-margin-large: 100px;
+  --spacing-margin-medium: 20px;
+
+  /* Font Sizes */
+  --font-size-base: var(--s);
+  --font-size-heading1: calc(var(--l) + 1vw);
+  --font-size-heading2: var(--m);
+  --font-size-paragraph: var(--s);
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* Figure */
+  --figure-margin-top: var(--spacing-margin-large);
+
+  /* Article */
+  --article-margin-bottom: var(--spacing-margin-large);
+
+  /* Misc */
+  --lh-heading: 100%;
+}

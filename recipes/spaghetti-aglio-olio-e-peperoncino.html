@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaghetti aglio, olio e peperoncino</title>
+
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/quantity-selector.css">
+    <link rel="stylesheet" href="../styles/other-recipes.css">
+
+    <script src="../scripts/slideshow.js"></script>
+    <script src="../scripts/form-validation.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/quantity-selector.js"></script>
+
+</head>
+
+<body>
+    <div class="navbar" data-js-menue id="main-navigation">
+        <div>
+            <ul>
+                <li><a class="is-active" href="../recipes/spaghetti-aglio-olio-e-peperoncino.html">Rezepte</a></li>
+                <li><a href="../index.html">Menüs</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Mein Kochbuch</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="menue-button" data-js-menue-button>
+        <a href="#main-navigation"><img src="../icons/menue.svg"></a>
+    </div>
+
+    <div class="main">
+        <div data-intern-nav class="intern-nav">
+            <div>
+                <div><a href="#einleitung">Einleitung</a></div>
+                <div><a href="#zutaten-und-naehrwerte">Zutaten & Nährwerte</a></div>
+                <div><a href="#rezept">Rezept</a></div>
+                <div><a href="#fazit">Fazit</a></div>
+                <div><a href="#verwandte-rezepte">Verwandte Rezepte</a></div>
+                <div><a href="#kommentare">Kommentare</a></div>
+            </div>
+        </div>
+        <div class="hero" id="einleitung">
+            <figure>
+                <img src="../images/spaghetti-aglio-olio-e-peperoncino.jpg"
+                    alt="Bild von Spaghetti aglio, olio e peperoncino">
+            </figure>
+
+            <div class="hero-content">
+                <h2>Spaghetti aglio, olio e peperoncino</h2>
+                <p>Hey, heute zeige ich dir ein einfaches und dennoch unglaublich leckeres Rezept, das deine
+                    Geschmacksknospen zum Tanzen bringen wird. Wir werden eine köstliche Pasta zubereiten, bei der die
+                    Aromen von frischen Tomaten, Knobluch und Peperoni im Vordergrund stehen. Lass uns loslegen und
+                    gemeinsam in die Welt der italienischen Küche eintauchen!</p>
+            </div>
+        </div>
+
+        <section id="zutaten-und-naehrwerte">
+            <h2 class="quantity-selector-head">Angaben für <span class="highlighted">
+                    <select name="quantity-selector" id="quantity-selector" data-quantity-selector>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select></span> Portionen</h2>
+
+            <div class="grid" data-columns="2">
+                <section class="ingredients">
+                    <h2>Zutaten</h2>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Menge</th>
+                                <th>Zutat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-quantity="125" data-unit="g"></td>
+                                <td>Spaghetti</td>
+                            </tr>
+                            <tr>
+                                <td data-quantity="1"></td>
+                                <td>Tomate(n)</td>
+                            </tr>
+                            <tr>
+                                <td data-quantity="1.25"></td>
+                                <td>Knoblauchzehe(n)</td>
+                            </tr>
+                            <tr>
+                                <td data-quantity="0.5"></td>
+                                <td>Peperoni</td>
+                            </tr>
+                            <tr>
+                                <td data-quantity="1.25" data-unit="EL"></td>
+                                <td>Petersilie</td>
+                            </tr>
+                            <tr>
+                                <td data-quantity="0.5" data-unit="TL"></td>
+                                <td>Gemüsebrühepulver</td>
+                            </tr>
+                            <tr>
+                                <td data-quantity="25" data-unit="ml"></td>
+                                <td>Olivenöl, nativ</td>
+                            </tr>
+                            <tr>
+                                <td data-quantity="10" data-unit="g"></td>
+                                <td>Hartkäse</td>
+                            </tr>
+                            <tr>
+                                <td data-quantity="0.25" data-unit="TL"></td>
+                                <td>Basilikum</td>
+                            </tr>
+                            <tr>
+                                <td data-quantity="0.25" data-unit="TL"></td>
+                                <td>Oregano</td>
+                            </tr>
+                            <tr>
+                                <td data-quantity="0.125" data-unit="TL"></td>
+                                <td>Salz</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="nutritional-values">
+                    <h2>Nährwerte</h2>
+
+                    <dl>
+                        <dt>Kalorien</dt>
+                        <dd data-quantity="178.25"></dd>
+                        <dt>Kohlenhydrate</dt>
+                        <dd data-quantity="22.905" data-unit="g"></dd>
+                        <dt>Eiweiß</dt>
+                        <dd data-quantity="4.6925" data-unit="g"></dd>
+                        <dt>Fett</dt>
+                        <dd data-quantity="7.4575" data-unit="g"></dd>
+                    </dl>
+                </section>
+            </div>
+            <hr>
+        </section>
+
+        <section id="rezept" data-demo="rezept">
+            <h1>Rezept</h1>
+            <ol class="steps">
+                <li>
+                    <figure>
+                        <img src="../images/step-1.jpg" alt="Topf mit kassen Spaghetti drin">
+                        <figcaption class="has-counter">
+                            Die Spaghetti nach Packungsanleitung kochen. Kurz vor Ende der Garzeit 2 Kellen vom
+                            Kochwasser
+                            entnehmen und beiseite stellen.
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="is-reversed">
+                        <img src="../images/step-2.jpg" alt="Topf mit kassen Spaghetti drin">
+                        <figcaption class="has-counter">
+                            Den Hartkäse mit einer Reibe zerkleinern. Die Tomate in kleine Würfel schneiden und in eine
+                            Schüssel
+                            geben. Den Knoblauch klein schneiden, leicht salzen, kurz warten und zerdrücken, bis eine
+                            Paste
+                            entsteht. Die Knoblauchpaste ebenfalls in die Schüssel geben.
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="../images/step-3.jpg" alt="Topf mit kassen Spaghetti drin">
+                        <figcaption class="has-counter">
+                            Basilikum, Oregano, Petersilie und Peperoni ebenfalls klein schneiden und zur Würzmischung
+                            in der
+                            Schüssel geben. Das Delikatessbrühepulver hinzufügen. Die 2 Kellen Kochwasser dazugießen und
+                            alles
+                            gut verrühren. Die Würzmischung 2 Minuten ziehen lassen und abschmecken.
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="is-text-only">
+                    <p class="has-counter">
+                        Die gekochten Spaghetti gut abtropfen lassen und in einer heißen Pfanne maximal 1 Minute
+                        schwenken.
+                        Anschließend die Würzmischung hinzufügen und gründlich durchschwenken. Den geriebenen Hartkäse
+                        hinzufügen,
+                        der als Bindemittel dient und sich mit der flüssigen Würzmischung verbindet.
+                    </p>
+                </li>
+                <li>
+                    <figure class="is-reversed">
+                        <img src="../images/step-4.jpg" alt="Topf mit kassen Spaghetti drin">
+                        <figcaption class="has-counter">
+                            Vor dem Servieren das kalte Olivenöl über die Pasta geben und vermischen. Nicht vorher, da
+                            das Öl
+                            seinen Geschmack und seine Qualität verliert, wenn es erhitzt wird. Bei Bedarf zusätzlichen
+                            Hartkäse
+                            darüberstreuen.
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="is-text-only">
+                    <p class="has-counter">Genieße die perfekt zubereiteten Spaghetti mit dieser aromatischen
+                        Würzmischung und lass dich von den authentischen italienischen Geschmacksnoten verwöhnen. Die
+                    richtige Zubereitung macht den Unterschied!
+                    </p>
+                </li>
+            </ol>
+            <hr>
+        </section>
+
+        <section id="fazit">
+            <h2>Fazit</h2>
+            <p>Und da hast du es! Eine wunderbare Pasta-Kreation, die dich mit ihren intensiven Aromen und der perfekten
+                Kombination von Tomaten, Knoblauch und Peperoni begeistern wird. Der frische Geschmack der Petersilie
+                und die herzhafte Note des Hartkäses runden das Gericht ab. Gieße dir eine Portion dieser köstlichen
+                Spaghetti ein, lehn dich zurück und genieße das italienische Flair, das diese Mahlzeit mit sich bringt.
+                Buon appetito!</p>
+
+            <hr>
+        </section>
+
+        <section id="verwandte-rezepte">
+            <h2>Verwandte Rezepte</h2>
+
+            <div class="other-recipes">
+                <ul class="other-recipes-list" data-js-slideshow>
+                    <li class="other-recipes-list__item is-active" data-js-slide>
+                        <figure>
+                            <img src="../images/other-recipes/lachs-tagliatelle-mit-cremiger-oberssauce.jpg"
+                                alt="Tagliatelle al Salmone">
+                            <figcaption>Tagliatelle al Salmone</figcaption>
+                        </figure>
+                    </li>
+                    <li class="other-recipes-list__item" data-js-slide>
+                        <figure>
+                            <img src="../images/other-recipes/nudeln-mit-zucchini-kraeuter-sauce.jpg"
+                                alt="Spaghetti Carbonara">
+                            <figcaption>Spaghetti Carbonara</figcaption>
+                        </figure>
+                    </li>
+                    <li class="other-recipes-list__item" data-js-slide>
+                        <figure>
+                            <img src="../images/other-recipes/spaghetti-alla-puttanesca.jpg">
+                            <figcaption>Nudeln mit Zucchini Kräuter Sauce</figcaption>
+                        </figure>
+                    </li>
+                    <li class="other-recipes-list__item" data-js-slide>
+                        <figure>
+                            <img src="../images/other-recipes/spaghetti-bolognese.jpg" alt="Spaghetti alla Melanzane">
+                            <figcaption>Spaghetti alla Melanzane</figcaption>
+                        </figure>
+                    </li>
+                    <li class="other-recipes-list__item" data-js-slide>
+                        <div>
+                            <img src="../images/other-recipes/spaghetti-carbonara.jpg" alt="Spaghetti alla Melanzane">
+                            <p>Spaghetti alla Melanzane</p>
+                        </div>
+                    </li>
+                    <li class="other-recipes-list__item" data-js-slide>
+                        <figure>
+                            <img src="../images/other-recipes/spaghetti-melanzane.jpg" alt="Spaghetti alla Puttanesca">
+                            <figcaption>Spaghetti alla Puttanesca</figcaption>
+                        </figure>
+                    </li>
+                    <li class="other-recipes-list__item" data-js-slide>
+                        <figure>
+                            <img src="../images/other-recipes/penne-Arrabiata.jpg" alt="Penne Arrabiata">
+                            <figcaption>Penne Arrabiata</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+
+                <button class="other-recipes-list__button" data-js-slideshow-gui="back"><img src="../icons/gui-prev.svg" alt="back Button"></button>
+                <button class="other-recipes-list__button is-right" data-js-slideshow-gui="forward"><img src="../icons/gui-next.svg"
+                        alt="forward Button"></button>
+            </div>
+        </section>
+
+        <section class="comments" id="kommentare">
+            <h2>Kommentare</h2>
+            <div class="comment">
+                <div class="comment-user-info">
+                    <img src="../images/user.png" alt="Logo">
+                    <p>Username</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil quibusdam neque temporibus
+                    perferendis repudiandae ex expedita, eaque quasi. Neque, corrupti enim. Repellendus labore excepturi
+                    provident placeat praesentium esse nulla.</p>
+            </div>
+
+            <h3>Wie lautet Dein Kommentar?</h3>
+
+            <form action="#">
+                <div class="form-container">
+                    <div class="input-container">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Max Mustermann">
+                    </div>
+
+                    <div class="input-container">
+                        <label>E-Mail</label>
+                        <input type="email" name="email" placeholder="max@mustermann.de">
+                    </div>
+                </div>
+
+                <label>Nachricht</label>
+                <textarea name="message" placeholder="Tolles Rezept!"></textarea>
+
+                <label>
+                    <input type="checkbox" name="data">
+                    Datenschutzerklärung</label>
+
+                <div class="form-container">
+                    <button type="reset">Zurücksetzen</button>
+                    <button id="comment-submit-btn" type="submit">Senden</button>
+                </div>
+            </form>
+        </section>
+    </di>
+</body>
+
+</html>

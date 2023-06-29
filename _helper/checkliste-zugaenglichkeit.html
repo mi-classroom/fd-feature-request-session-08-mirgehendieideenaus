@@ -1,0 +1,695 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Barrierefreiheit Basic - Rechtsbegleitung Köln (1)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="bd7d6c24-f34a-4ab4-81d8-47cfb0ce19f1" class="page sans"><header><h1 class="page-title">Barrierefreiheit Basic - Rechtsbegleitung Köln (1)</h1><p class="page-description"></p></header><div class="page-body"><p id="990ce95e-a770-4e52-aeb7-edcd332f1ce0" class="">
+</p><h1 id="1f9053d6-e2e4-483d-b34c-d35a815c076a" class="">Checkliste</h1><p id="0e8adee2-22a3-42bc-931e-1ea8090f2e69" class="">Die Umsetzung einer barrierefreien Webseite ist ein wichtiger Schritt, um sicherzustellen, dass alle Nutzer:innen die Webseite optimal nutzen können. Mit dieser Checkliste kann sichergestellt werden, dass eine Webseite barrierefrei ist und allen Nutzer:innen zugänglich ist.</p><p id="27ea70bb-490a-485e-91b4-117213d2f4ac" class="">Tools wie <a href="https://developer.chrome.com/docs/lighthouse/overview/">Lighthouse</a> können dir bei der Prüfung dieser Bedingungen helfen, sie ersetzen eine manuelle Prüfung aber nicht.</p><ul id="afb240ec-1475-4614-94c0-20b7fb0c6424" class="toggle"><li><details open=""><summary>Mehr Informationen zum Hintergrund der Checkliste</summary><p id="b44c5dcf-b868-44cf-a70c-30fa49639f48" class="">Diese Checkliste basiert auf <a href="https://www.a11yproject.com/checklist/">https://www.a11yproject.com/checklist/</a> und verwendet die <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> als Referenzpunkt. Die WCAG ist ein gemeinsamer Standard für die Zugänglichkeit von Webinhalten für Einzelpersonen, Organisationen und Regierungen.</p><p id="6cd8bbbc-a3f7-4d17-80ed-1f767720062d" class=""> Es gibt drei Stufen der Einhaltung der Barrierefreiheit in der WCAG, die die Priorität der Unterstützung widerspiegeln: </p><ul id="c167e3b2-8c5d-45df-97b1-67ffe6f88494" class="toggle"><li><details open=""><summary><strong>A</strong>: Wesentlich </summary><p id="b428a2a9-5cc7-4552-9cb5-877561357f48" class="">Wenn dies nicht erreicht wird, ist die unterstützende Technologie möglicherweise nicht in der Lage, die Seite oder den View zu lesen, zu verstehen oder vollständig zu betreiben. </p></details></li></ul><ul id="cb8880e7-3890-490b-b671-c25b361095eb" class="toggle"><li><details open=""><summary><strong>AA</strong>: Ideale Unterstützung </summary><p id="5a518550-fefc-4ea4-92a9-85c36b8f3e39" class="">Für viele Regierungs- und öffentliche Websites erforderlich. </p></details></li></ul><ul id="495f3501-9454-478e-b0b3-42f9b3f64955" class="toggle"><li><details open=""><summary><strong>AAA</strong>: Spezialisierter Support </summary><p id="4f67113f-c494-490c-8cbb-0ef9c92757aa" class="">Dies ist in der Regel für Teile von Websites und Web-Apps reserviert, die einem spezialisierten Publikum dienen. </p></details></li></ul><p id="3582204e-c563-40da-b3c1-75b389128574" class="">Diese Checkliste zielt auf viele, aber nicht alle Bedenken der Stufe A und AA ab. Beachte, dass die verschiedenen Ebenen der WCAG-Unterstützung nicht unbedingt auf ein erhöhtes Maß an Schwierigkeiten bei der Umsetzung hinweisen.</p><p id="69767454-14ce-43b3-b05e-2e68fe00ed83" class="">Die Probleme, die in dieser Checkliste überprüft werden, decken eine Vielzahl von Behinderungsbedingungen ab. Es gibt keine &quot;perfekte Zugänglichkeit&quot; oder eine Website, die &quot;100% zugänglich&quot; ist.</p></details></li></ul><h2 id="a846dd66-def9-4a5c-b552-3bea5190a03b" class="">1. Inhalt</h2><p id="7adbc792-fbcd-4c8a-a585-72f9a7a3c12e" class="">Der Inhalt ist der wichtigste Teil der Webseite.<div class="indented"><ul id="fd7b4fb8-ee6f-4612-899a-28b93fb4d22a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Die Sprache des Inhalts ist klar und einfach zu verstehen. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-supplements.html">3.1.5 READING LEVEL</a></span><div class="indented"></div></li></ul><ul id="1b5b66c8-33d0-464f-85ad-0fb8f7020ef9" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass der Inhalt der Elemente <code>button</code>, <code>a</code> und <code>label</code> eindeutig und beschreibend ist. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">1.3.1 INFO AND RELATIONSHIPS</a></span><div class="indented"></div></li></ul></div></p><p id="f237cbd3-26c2-441d-b456-61c4e729063c" class="">
+</p><h2 id="073ad36b-4788-4219-8358-dd97fae48f83" class="">2. Globaler Code</h2><p id="d137c9a7-fbbb-4e92-8a5f-38e8c2e4aeac" class="">Globaler Code ist Code, der die gesamte Website oder Web-App betrifft.<div class="indented"><ul id="fcc23a0d-84a9-42bf-8bd1-4e1d56500a00" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Der Code der Webseite sollte valide sein. Für eine einfache Prüfung kann der <a href="https://validator.w3.org/">W3C-Validator</a> genutzt werden. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-parses.html">4.1.1 PARSING</a></span><div class="indented"></div></li></ul><ul id="598dc3a2-2eb9-408a-872a-b272ab104d9a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Verwende das <code>lang</code>-Attribut  auf dem html-Element. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-doc-lang-id.html">3.1.1 LANGUAGE OF PAGE</a></span><div class="indented"></div></li></ul><ul id="9e3833a8-aea1-40d1-a188-b63e4d17ab08" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass für jede Seite oder jeden View ein eindeutiger Titel vorhanden ist. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html">2.4.2 PAGE TITLED</a></span><div class="indented"></div></li></ul><ul id="037c2c41-9ecf-49be-80f4-565a86966ae7" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass die Vergrößerung des Viewports nicht deaktiviert ist. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">1.4.4 RESIZE TEXT</a></span><div class="indented"></div></li></ul><ul id="051a79a3-e7e9-4f00-8025-09e4a3435c8b" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Verwende Landmark-Elemente (<code>nav</code>, <code>main</code>, …), um wichtige Inhaltsbereiche anzugeben. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">4.1.2 NAME, ROLE, VALUE</a></span><div class="indented"></div></li></ul><ul id="ee431a37-1cda-4911-b890-b349f4ebf3d6" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle einen linearen Inhaltsfluss sicher. (Vermeide <code>tabindex</code>-Werte ungleich 0 oder -1) <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html">2.4.3 FOCUS ORDER</a></span><div class="indented"></div></li></ul><ul id="fa6fd13b-4f2f-4a4c-8719-1880dd049bcd" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Vermeide die Verwendung des <code>autofocus</code>-Attributs. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html">2.4.3 FOCUS ORDER</a></span><div class="indented"></div></li></ul></div></p><p id="0a6e3a04-6bfc-47a8-9cd1-b5f9f8d02b09" class="">
+</p><h2 id="2b6456df-8c85-4d39-acea-dcfb5cdd5f74" class="">3. Tastatur</h2><p id="7aff5286-22ed-4850-b69c-a52b9170121e" class="">Es ist wichtig, dass die Benutzeroberfläche und Inhalte mit einer Tastatur bedient und navigiert werden können. Einige Leute können keine Maus verwenden oder nutzen möglicherweise andere unterstützende Technologien, die kein Schweben oder präzises Klicken ermöglichen.<div class="indented"><ul id="564b2588-206b-40c9-b8ba-217fcb82124e" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass es einen sichtbaren Fokus-Stil für interaktive Elemente gibt, die über Tastatureingabe navigiert werden. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html">2.4.7 FOCUS VISIBLE</a></span><div class="indented"></div></li></ul><ul id="21bd9839-a68a-4585-935d-aacc7be3c418" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Überprüfe, ob die Tastatur-Fokus-Reihenfolge der visuellen Anordnung entspricht. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html">1.3.2 MEANINGFUL SEQUENCE</a></span><div class="indented"></div></li></ul><ul id="aa4f4ec3-7e6b-4e34-ab7c-abc44cbe4047" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Entferne unsichtbare fokussierbare Elemente, wie inaktive Dropdown-Menüs oder Modale. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html">2.4.3 FOCUS ORDER</a></span><div class="indented"></div></li></ul></div></p><p id="34ef1d5d-dee8-4e35-8aa7-66cce0becd2a" class="">
+</p><h2 id="ac70fd88-b6b9-4867-9254-1c2d3ad9f8f9" class="">4. Bilder</h2><p id="0315a6f8-10ef-48d4-b58e-8d3cb9bf49be" class="">Bilder sind ein häufiger Teil der meisten Websites. Stelle sicher, dass sie von allen genossen werden können.<div class="indented"><ul id="9732af28-e5ac-45e3-879a-766cb5247a5d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Alle <code>img</code>-Elemente sollten <code>alt</code>-Attribute haben, die den Inhalt des Bildes beschreiben. (rein dekorative Bilder sollten ein leeres <em>alt</em>-Attribut besitzen) <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">1.1.1 NON-TEXT CONTENT</a></span><div class="indented"></div></li></ul><ul id="85bd4107-f7b0-4af0-813f-ec78e7d3d5bc" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle für komplexe Bilder wie Diagramme, Grafiken und Karten eine Textalternative bereit. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">1.1.1 NON-TEXT CONTENT</a></span><div class="indented"></div></li></ul><ul id="bb232082-0047-4837-9888-03097c4f668d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass die <code>alt</code>-Beschreibung für Bilder, die Text enthalten, auch diesen Text enthält. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">1.1.1 NON-TEXT CONTENT</a></span><div class="indented"></div></li></ul></div></p><p id="884c21c3-aacd-4d78-a153-5e1830b313d5" class="">
+</p><h2 id="07d6c962-cc0f-49b9-b208-efe2ed2bbfdc" class="">5. Überschriften</h2><p id="e7802472-3281-43db-8843-a8f70f9d83d8" class="">Überschriften (<code>h1</code>, <code>h2</code>, <code>h3</code>, etc.) helfen dabei, den Inhalt der Seite in verwandte &quot;Chunks&quot; von Informationen aufzuteilen. Sie sind extrem wichtig, um Menschen, die unterstützende Technologien verwenden, dabei zu helfen, die Bedeutung einer Seite oder Ansicht zu verstehen. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html">2.4.6 HEADINGS OR LABELS</a><div class="indented"><ul id="9bd88f6f-1af5-4eb7-9e51-3c176446b8ac" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Verwende Überschrift-Elemente, um Inhalte einzuführen.</span><div class="indented"></div></li></ul><ul id="e71ee861-ccf2-4afe-8d35-96e7073c47dd" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Verwende nur ein <code>h1</code>-Element pro Seite oder View. (nutze <code>h1</code> nicht für Elemente, die sich nicht beim Seitenwechsel ändern)</span><div class="indented"></div></li></ul><ul id="a111a638-7053-41f8-928d-3144e1c9491a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Überschriften-Elemente sollten in einer logischen Reihenfolge geschrieben werden.</span><div class="indented"></div></li></ul><ul id="1be74aad-c06e-4757-9184-a162a94c6408" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Überspringe keine Überschriften-Ebenen.</span><div class="indented"></div></li></ul></div></p><p id="6cd7082b-e8c8-4449-9485-89e1a86c1753" class="">
+</p><h2 id="3c1849fd-7458-472f-8ab3-bddf544db83f" class="">6. Listen</h2><p id="14cc4abc-9f90-4132-b890-99e2bef9da8a" class="">Listen-Elemente lassen Menschen erkennen, dass eine Sammlung von Elementen zusammengehört und ob sie sequentiell sind, sowie wie viele Elemente in der Gruppierung vorhanden sind. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">1.3.1 INFO AND RELATIONSHIPS</a><div class="indented"><ul id="aa6cc33e-f150-48d1-8bb5-21ccf669bf88" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Verwende Listen-Elemente (<code>ol</code>, <code>ul</code> und <code>dl</code>), um Listeninhalte darzustellen.</span><div class="indented"></div></li></ul></div></p><p id="a9b2c008-d9e7-4c97-8926-9d502d38f056" class="">
+</p><h2 id="f810d2f9-e04f-44ce-81a5-12f6cefff11a" class="">7. Bedienelemente</h2><p id="a7fe0d7d-f576-4d75-a502-a697fbac4231" class="">Bedienelemente sind interaktive Elemente wie Links und Schaltflächen, mit denen eine Person zu einem bestimmten Ziel navigieren oder eine Aktion ausführen kann.<div class="indented"><ul id="f9590f7b-e21f-4a2f-af73-17fd74624114" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Verwende das <code>a</code>-Element für Links. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">1.3.1 INFO AND RELATIONSHIPS</a></span><div class="indented"></div></li></ul><ul id="2987f1a6-1b08-488b-b6e8-f3bc9b15a630" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass Links als Links erkennbar sind. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">1.4.1 USE OF COLOR</a></span><div class="indented"></div></li></ul><ul id="b6088827-1164-480b-9e97-87639584fa95" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass Bedienelemente <code>:focus</code>-Zustände haben. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html">2.4.7 FOCUS VISIBLE</a></span><div class="indented"></div></li></ul><ul id="4a5cdd50-5c04-4e37-811e-664d961cf528" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Verwende das <code>button</code>-Element für Schaltflächen. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">1.3.1 INFO AND RELATIONSHIPS</a></span><div class="indented"></div></li></ul><ul id="89a799d6-d2ad-417a-84e0-903e916cd552" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Mache Links erkennbar, die in einem neuen Tab oder Fenster geöffnet werden. <a href="https://www.w3.org/TR/WCAG20-TECHS/G201.html">G201: GIVING USERS ADVANCED WARNING WHEN OPENING A NEW WINDOW</a></span><div class="indented"></div></li></ul></div></p><p id="e9cc97aa-f981-4f17-8f8a-005c400713e3" class="">
+</p><h2 id="e135224c-de00-4dbb-9724-2c47175685ad" class="">8. Tabellen</h2><p id="3c2d426f-949e-478f-8a5e-53db826d7f78" class="">Tabellen sind eine strukturierte Menge von Daten, die Menschen helfen, die Beziehungen zwischen verschiedenen Arten von Informationen zu verstehen.<div class="indented"><ul id="08ab07e8-2544-481d-ba35-642c13c74351" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Verwende das <code>table</code>-Element, um tabellarische Daten zu beschreiben. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">1.3.1 INFO AND RELATIONSHIPS</a></span><div class="indented"></div></li></ul><ul id="984c31f0-e1ce-4e86-91a2-44c11c7f2457" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Verwende das <code>th</code>-Element für Tabellenüberschriften (mit entsprechenden <code>scope</code>-Attributen). <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-parses.html">4.1.1 PARSING</a></span><div class="indented"></div></li></ul><ul id="ff463c2f-0aee-4a30-a269-0ddc466b7d23" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Verwende das <code>caption</code>-Element, um einen Titel für die Tabelle bereitzustellen. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html">2.4.6 HEADINGS OR LABELS</a></span><div class="indented"></div></li></ul></div></p><p id="fa08c2c1-d121-4f03-a976-5c404c4f2aba" class="">
+</p><h2 id="88d17ee1-6005-45d0-913f-1ba2f9f72fe2" class="">9. Formulare</h2><p id="54c8d717-8ceb-41cd-8afa-265f68bf7773" class="">Formulare ermöglichen es Benutzer:innen, Informationen in eine Website einzugeben, um sie zu verarbeiten und zu manipulieren. Dazu gehören Dinge wie das Versenden von Nachrichten und das Aufgeben von Bestellungen.<div class="indented"><ul id="9dcad0dc-94b8-4745-8f12-e6df540802be" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Alle Formulareingaben sind mit einem entsprechenden <code>label</code>-Element verbunden. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-change.html">3.2.2 ON INPUT</a></span><div class="indented"></div></li></ul><ul id="d51c9dde-d640-4e14-a6bf-ec5e58dcb60a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Verwende <code>fieldset</code>- und <code>legend</code> -Elemente, wo dies sinnvoll ist. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">1.3.1 INFO AND RELATIONSHIPS</a></span><div class="indented"></div></li></ul><ul id="cbedc6b8-fa3b-49f6-a6ab-a6e6bcab71cf" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Die Formulareingaben verwenden das Attribut <code>autocomplete</code>, wo dies sinnvoll ist. <a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html">1.3.5 IDENTIFY INPUT PURPOSE</a></span><div class="indented"></div></li></ul><ul id="9ef9f231-6986-4a41-b0ac-011e52ae34a4" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass Eingabefehler im Formular nach der Übermittlung über der Formularliste angezeigt werden. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html">3.3.1 ERROR IDENTIFICATION</a></span><div class="indented"></div></li></ul><ul id="82f17bd0-3168-4868-9a31-b71ed9b81913" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Assoziiere Fehlermeldungen mit der Eingabe, auf die sie sich beziehen (z.B. mithilfe von <code>aria-describedby</code>) <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html">3.3.1 ERROR IDENTIFICATION</a></span><div class="indented"></div></li></ul><ul id="2bc48839-edfe-406f-885e-1109b5681290" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass Fehler-, Warn- und Erfolgszustände visuell nicht nur durch Farbe vermittelt werden. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">1.4.1 USE OF COLOR</a></span><div class="indented"></div></li></ul></div></p><p id="3b664107-7a7a-4c79-a7df-1053de3b42a5" class="">
+</p><h2 id="50e653ff-7a53-444a-adb8-c663cb50517a" class="">10. Medien</h2><p id="191f1557-101a-4ccf-bd6c-d2dedf563487" class="">Medien umfassen Inhalte wie vorab aufgenommene und Live-Audio- und -Videos.<div class="indented"><ul id="2f37d44c-fed1-4274-8f0a-658fa35fa0c3" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass Medien nicht automatisch abgespielt werden. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-dis-audio.html">1.4.2 AUDIO CONTROL</a></span><div class="indented"></div></li></ul><ul id="b474f7ea-a10e-4478-9265-2efd87fb696a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass Mediensteuerungen angemessene Markup verwenden. (z.B. dass ein Stummschaltungs-Button einen korrekten toggle-State hat, oder dass ein Lautstärkeregler <code>&lt;input type=&quot;range&quot;&gt;</code> verwendet.)  <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">1.3.1 INFO AND RELATIONSHIPS</a></span><div class="indented"></div></li></ul><ul id="12a176aa-c482-478f-83cd-4f09c00ec3d4" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Überprüfe, ob alle Medien pausiert werden können. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html">2.1.1 KEYBOARD</a></span><div class="indented"></div></li></ul><h3 id="3ff2b642-299d-4b15-a09c-e66048abf64c" class="">Video</h3><ul id="66d71ead-2643-49b3-87a9-333f7c8af43a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Untertitel sollten vorhanden sein. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html">1.2.2 CAPTIONS</a></span><div class="indented"></div></li></ul><ul id="11a99075-e5a0-451b-a11c-313210828b32" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Entferne mögliche Auslöser für epileptische Anfälle. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html">2.3.1 THREE FLASHES OR BELOW THRESHOLD</a></span><div class="indented"></div></li></ul><h3 id="ae3a2dff-172c-4aa1-96aa-b4488ad70f62" class="">Audio</h3><ul id="73ea0b73-8b92-425b-97cc-ba2a771590f9" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Transkripte sollten den Inhalt des Audio-Clips beschreiben. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">1.1.1 NON-TEXT CONTENT</a></span><div class="indented"></div></li></ul></div></p><p id="414c94b0-a550-4290-afa1-6b6209bf6a4c" class="">
+</p><h2 id="23d22cc7-a339-4bd2-8a69-0562167de2fd" class="">11. Erscheinungsbild</h2><p id="2d6ca57f-93cf-4ca5-af45-1aae3da67446" class="">Wie der Inhalt Ihrer Website-App in unterschiedlichen Situationen aussieht.<div class="indented"><ul id="14bd3c5a-7bf5-4318-8bc9-9c642d104ded" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Überprüfen Sie Ihren Inhalt in spezialisierten Browsermodi (z.B. hoher Kontrast, invertierte Farben). <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">1.4.1 USE OF COLOR</a></span><div class="indented"></div></li></ul><ul id="cc3a6ef9-168a-4d69-8186-01584ab587fb" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Prüfe das korrekte Erscheinungsbild bei einer Textgröße von 200%. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">1.4.4 RESIZE TEXT</a></span><div class="indented"></div></li></ul><ul id="72785ebe-272b-49f3-a955-56136b239397" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass ein sinnvoller Abstand zwischen den Inhalten bei Bildschirmlupen-Nutzung beibehalten wird. (z.B. mithilfe des <a href="https://scottvinkle.me/blogs/work/proximity-and-zoom">Straw-Tests</a>) <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html">1.3.3 SENSORY CHARACTERISTICS</a></span><div class="indented"></div></li></ul><ul id="0d17dcff-7782-4f5a-9c51-3f5ec2290917" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass Farbe nicht der einzige Weg ist, um Informationen zu vermitteln. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">1.4.1 USE OF COLOR</a></span><div class="indented"></div></li></ul><ul id="ae3c2697-d230-4864-8f90-948769258d91" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass Anweisungen nicht nur visuell oder nur auditiv sind. <a href="https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html">1.3.3 SENSORY CHARACTERISTICS</a></span><div class="indented"></div></li></ul><ul id="8d6a0168-5c68-4ef3-a26b-91125b0b582e" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Verwende ein einfaches, unkompliziertes und konsistentes Layout. <a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html">1.4.10 REFLOW</a></span><div class="indented"></div></li></ul></div></p><p id="4be9fe7a-48b2-4fad-9047-305834099fe5" class="">
+</p><h2 id="288fa873-89dc-4c8d-826b-bd77a7a44e87" class="">12. Animation</h2><p id="0f8c8c89-4716-4d40-8d16-70b888b0439e" class="">Inhalt, der sich bewegt, entweder von selbst oder wenn er durch eine Person aktiviert wird, die eine Steuerung betätigt.<div class="indented"><ul id="d6ae4456-0e11-4f37-9995-b50bd7424792" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass Animationen subtil sind und nicht zu stark flackern. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html">2.3.1 THREE FLASHES OR BELOW THRESHOLD</a></span><div class="indented"></div></li></ul><ul id="3974d381-52e4-4061-bc0a-3f91e07501f8" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle eine Möglichkeit bereit, um das Hintergrundvideo anzuhalten. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html">2.2.2 PAUSE, STOP, HIDE</a></span><div class="indented"></div></li></ul><ul id="efe0b39b-7de0-483d-9d47-58ce35e4c46c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass alle Animationen der <code>prefers-reduced-motion</code> Media Query folgen. <a href="https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html">2.3.3 ANIMATION FROM INTERACTIONS</a></span><div class="indented"></div></li></ul></div></p><p id="017f639d-a346-46f7-9c6d-b75e41fd1b39" class="">
+</p><h2 id="77113571-afb0-4253-8bd3-19d738994ac1" class="">13. Farbkontrast</h2><p id="8bc8f520-a0b2-434a-9a89-009fec1f5b74" class="">Der Farbkontrast beschreibt, wie lesbar Farben sind, wenn sie neben und übereinander gelegt werden. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">1.4.3 CONTRAST</a> &amp; <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">1.4.11 NON-TEXT CONTRAST</a><div class="indented"><p id="c75d6f6d-c9a9-478c-a7af-ac8287692ae3" class="">Überprüfe den Kontrast…</p><ul id="583ab032-825c-4910-abd9-40a07fe47f66" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">…aller Texte normaler Größe. (Kontrastverhältnis von mind. 4,5:1 empfohlen)</span><div class="indented"></div></li></ul><ul id="73236040-5a39-475f-a756-4d19a7d2495f" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">…aller großen Texte. (Kontrastverhältnis von mind. 3:1 empfohlen)</span><div class="indented"></div></li></ul><ul id="96aa56e5-1525-46db-8f16-b6dd6c7dd91c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">…aller Symbole. (Kontrastverhältnis von mind. 3:1 empfohlen)</span><div class="indented"></div></li></ul><ul id="bfca65cc-df6f-4dcf-b8d7-b84ce23e3273" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">…der Ränder für Eingabeelemente (Texteingabe, Optionsfelder, Kontrollkästchen usw.). (Kontrastverhältnis von mind. 3:1 empfohlen)</span><div class="indented"></div></li></ul><ul id="65079332-1b5a-4363-8182-fb5e42848709" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">…bei Text, der Bilder oder Videos überschneidet. </span><div class="indented"></div></li></ul><ul id="0ed1e96e-2836-4f63-ad71-40ecdf89e90f" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">…möglicher benutzerdefinierter <code>::selection</code>-Farben.</span><div class="indented"></div></li></ul></div></p><p id="788a7492-bd14-4eeb-adaa-f703fac5d09c" class="">
+</p><h2 id="c81d519c-7d20-45c7-a190-acef6df0f1bb" class="">14. Mobile und Touch</h2><p id="302bfabe-2075-4ec0-ab88-37050d1c3179" class="">Dinge, auf die man die Mobile Experience überprüfen sollte.<div class="indented"><ul id="15b50c70-c731-46e8-a76a-3dea7c913a43" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Überprüfe, ob die Website in jede Ausrichtung gedreht werden kann. <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">1.3.4 ORIENTATION</a></span><div class="indented"></div></li></ul><ul id="4ca929a8-9f56-4614-a8eb-579c38985fb5" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle sicher, dass Schaltflächen- und Linksymbole problemlos mit unterschiedlichen Hand- und Bedienhilfsmittel-Größen aktiviert werden können. <a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">2.5.5 TARGET SIZE</a></span><div class="indented"></div></li></ul><ul id="31c7f863-9870-4ac9-a0b4-c5c5485dd0a2" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Stelle ausreichend Platz zwischen den interaktiven Elementen sicher, um einen Scrollbereich zu schaffen. <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">2.4.1 BYPASS BLOCKS</a></span><div class="indented"></div></li></ul></div></p><p id="85824088-95b3-41a4-b715-8bd9164d216e" class="">
+</p><p id="4ef45bc2-753e-470a-8028-c32d052e8d7a" class="">
+</p><p id="6756ff79-fd16-4eaf-8916-fe545824ff67" class="">
+</p><p id="f9b44163-c59a-4b36-9f21-a3704d659f57" class="">
+</p><p id="6a77fe9b-a68a-447d-a6fb-380fd2ddf4f3" class="">
+</p></div></article></body></html>

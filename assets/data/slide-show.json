@@ -1,0 +1,30 @@
+{
+  "headline": "Verwandte Rezepte",
+  "slides": [
+    {
+      "caption": "Spaghetti Carbonara",
+      "imagesrc": "spaghetti-carbonara.jpg",
+      "rating": 3
+    },
+    {
+      "caption": "Nudeln mit Zucchini Kräuter Sauce",
+      "imagesrc": "nudeln-mit-zucchini-kraeuter-sauce.jpg",
+      "rating": 4
+    },
+    {
+      "caption": "Spaghetti alla Melanzane",
+      "imagesrc": "spaghetti-melanzane.jpg.jpg",
+      "rating": 2
+    },
+    {
+      "caption": "Spaghetti alla Puttanesca",
+      "imagesrc": "spaghetti-alla-puttanesca.jpg",
+      "rating": 4
+    },
+    {
+      "caption": "Spaghetti Bolognese",
+      "imagesrc": "spaghetti-bolognese.jpg.jpg",
+      "rating": 5
+    }
+  ]
+}
